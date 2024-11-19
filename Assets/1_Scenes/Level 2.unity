@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VidaMaxima: 500
-  VidaAtual: 0
+  VidaAtual: 250
   deathEffect: {fileID: 0}
   isInvulnerable: 0
   barraVida: {fileID: 917451005}
@@ -715,7 +715,8 @@ PrefabInstance:
       value: P2Raph
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7003227974823630717, guid: 773fefe4863707c41b0be7a0f18b0d3b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7654337708079193160, guid: 773fefe4863707c41b0be7a0f18b0d3b, type: 3}
       insertIndex: -1
