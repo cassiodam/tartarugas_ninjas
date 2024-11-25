@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Chao
   - Empurravel
   - Background
   - Enemy
   - Ground
   - Block
+  - Coletaveis
+  - Chimney
   layers:
   - Default
   - TransparentFX

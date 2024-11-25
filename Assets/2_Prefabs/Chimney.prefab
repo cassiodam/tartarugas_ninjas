@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6457331194755994458}
   - component: {fileID: 1078447339652277810}
   - component: {fileID: 952656673742415564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chimney
-  m_TagString: Untagged
+  m_TagString: Chimney
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.13978994, y: -2.1562448}
@@ -182,7 +182,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2815324504200036869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -207,8 +207,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11390877, y: 1.2216243}
-  m_Size: {x: 1.8810754, y: 2.7053454}
+  m_Offset: {x: 0.14545596, y: -2.1144853}
+  m_Size: {x: 1.565604, y: 4.6454945}
   m_Direction: 0
 --- !u!1 &3657374006660545492
 GameObject:
@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4931361627466353922}
   - component: {fileID: 7976471509388716426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chimneys : MonoBehaviour
+public class ItemMovement : MonoBehaviour
 {
     
     public float Speed = 5;

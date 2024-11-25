@@ -1,22 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
 
-	public int health = 100;
+	public int VidaMaxima = 200;
+	public int VidaAtual;
 
 	public GameObject deathEffect;
+	public HealthBar barraVida;
 
+	public void Start()
+	{
+		VidaAtual = VidaMaxima;
+		barraVida.SetVidaMaxima(VidaMaxima);
+	}
 	public void TakeDamage(int damage)
 	{
-		health -= damage;
+		VidaAtual -= damage;
+		barraVida.SetVida(VidaAtual);
 
 		StartCoroutine(DamageAnimation());
 
-		if (health <= 0)
+		if (VidaAtual <= 0)
 		{
 			Die();
 		}
