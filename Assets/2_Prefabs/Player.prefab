@@ -498,6 +498,7 @@ MonoBehaviour:
   MoveSpeed: 6
   JumpCount: 100
   jumpForce: 15
+  MovimentacaoSwitch: 1
 --- !u!114 &5945471161658297913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,8 +511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5c276c313a2604cb010dfe3a72895d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  VidaMaxima: 200
+  VidaAtual: 0
   deathEffect: {fileID: 0}
+  barraVida: {fileID: 0}
 --- !u!1 &6802212293139516592
 GameObject:
   m_ObjectHideFlags: 0

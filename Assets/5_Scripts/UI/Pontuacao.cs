@@ -21,7 +21,7 @@ public class Pontuacao : MonoBehaviour
     {
         recorde = PlayerPrefs.GetInt("recorde", 0);
         Placar.text = "Pontuacao: " + pontos.ToString();
-        Recorde.text = "Pontuacao Maxima: " + recorde.ToString();
+        Recorde.text = "Recorde: " + recorde.ToString();
     }
 
 

@@ -7,6 +7,12 @@ public class Player : PlayerController
 
     // Variáveis para ativar/desativar movimento para os lados
     public bool MovimentacaoSwitch = true; // Habilita ou desabilita o movimento para os lados
+    Sons sons;
+
+private void Awake()
+{
+    sons = GameObject.FindWithTag("Sons").GetComponent<Sons>();
+}
 
     // Inicialização dos componentes do Swordman
     private void Start()
@@ -51,6 +57,7 @@ public class Player : PlayerController
                 if (currentJumpCount < JumpCount)
                 {
                     DownJump();
+
                 }
             }
             return; // Interrompe a execução para evitar outras ações
@@ -134,6 +141,7 @@ public class Player : PlayerController
                 if (!IsSit) // Se não estiver sentado
                 {
                     prefromJump(); // Executa o salto normal
+                    sons.PlayES(sons.pulo);
                 }
                 else
                 {
@@ -154,11 +162,25 @@ public class Player : PlayerController
     // Detector de colisão com coletáveis
 private void OnTriggerEnter2D(Collider2D colisao)
 {
-    if (colisao.tag == "Coletaveis")
+    if (colisao.CompareTag("Coletaveis"))
     {
         Destroy(colisao.gameObject);
         Pontuacao.instanciar.AtualizaPontos();
-        Debug.Log("+1 coletavel");
+        Debug.Log("+1 coletável");
+
+        // Verifica o tipo de coletável para tocar o som apropriado
+        if (colisao.name.Contains("pizza"))
+        {
+            sons.PlaySomColetavel(sons.coletarPizza);
+        }
+        else if (colisao.name.Contains("star"))
+        {
+            sons.PlaySomColetavel(sons.coletarStar);
+        }
+        else
+        {
+            Debug.LogWarning("Coletável desconhecido. Nenhum som tocado.");
+        }
     }
 
     // Verifica se o jogador colidiu com o objeto de tag "Chimney"
@@ -172,6 +194,7 @@ private void OnTriggerEnter2D(Collider2D colisao)
         }
     }
 }
+
 
 
     // Função para ativar ou desativar o movimento para os lados
