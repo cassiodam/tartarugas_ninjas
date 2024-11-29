@@ -41,7 +41,7 @@ public class LevelCompletion : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Não há mais cenas disponíveis.");
+            SceneManager.LoadScene(0);
         }
     }
 }

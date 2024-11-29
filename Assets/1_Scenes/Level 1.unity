@@ -1093,6 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1302533685}
+  tempoMaximo: 60
 --- !u!1 &2092238408
 GameObject:
   m_ObjectHideFlags: 0
